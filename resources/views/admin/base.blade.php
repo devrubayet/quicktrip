@@ -29,16 +29,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('admin-end/assests/favicon_io/favicon-32x32.png') }}">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('admin-end/assets/favicon_io/favicon-16x16.png') }}">
 <link rel="manifest" href="{{ asset('admin-end/assets/favicon_io/site.webmanifest') }}">
-    <style>
-        .fl-wrapper {
-            top: 70px !important;
-            /* navbar height onujayi adjust koro */
-            right: 20px;
-            /* optional: right offset */
-            z-index: 1050;
-            /* navbar er upore thakbe */
-        }
-    </style>
+    
 </head>
 
 <body>
@@ -87,6 +78,17 @@
     <script src="{{ asset('admin-end/assets/js/dashboard.js') }}"></script>
    
         <script>
+            // Clear button show/hide
+    input.addEventListener('input', () => {
+        clearBtn.style.display = input.value.length ? 'block' : 'none';
+    });
+
+    // Clear input on click
+    clearBtn.addEventListener('click', () => {
+        input.value = '';
+        clearBtn.style.display = 'none';
+        input.focus();
+    });
         document.querySelectorAll('.btn-delete').forEach(function(button) {
     button.addEventListener('click', function(e) {
         e.preventDefault();

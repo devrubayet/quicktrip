@@ -29,6 +29,13 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Moment.js -->
+<script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+
+<!-- Daterangepicker CSS + JS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+<script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}" />
 
 

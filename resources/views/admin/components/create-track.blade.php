@@ -83,6 +83,8 @@
                         <a href="{{ asset('storage/' . $visa_status->pdf) }}" target="_blank" class="btn btn-info btn-sm">
                             View Existing PDF
                         </a>
+                        <input type="checkbox" name="remove_pdf" value="1" id="remove_pdf">
+                        <label for="remove_pdf">Remove this PDF</label>
                     </div>
                 @endif
             </div>

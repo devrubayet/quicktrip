@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\VisaTrack;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class VisaTrakController extends Controller
 {
@@ -26,7 +27,8 @@ public function indexAjax(Request $request) {
     if ($referenceNumber) {
         $visa_statuses = VisaTrack::where('reference_number', $referenceNumber)->get();
     } else {
-        $visa_statuses = VisaTrack::paginate(5);
+        $visa_statuses = VisaTrack::orderByRaw('CAST(reference_number AS UNSIGNED) ASC')
+        ->paginate(10);
     }
 
     if ($visa_statuses->count() > 0) {
@@ -121,24 +123,45 @@ public function indexAjax(Request $request) {
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
-    {
+{
     $visa_status = VisaTrack::findOrFail($id);
 
     $request->validate([
         'applicant_name' => 'required|string|max:255',
         'name' => 'required|string|max:255',
-        'reference_number' => 'required|string|max:255|unique:visa_tracks,reference_number,' . $visa_status->id ,
+        'reference_number' => 'required|string|max:255|unique:visa_tracks,reference_number,' . $visa_status->id,
         'status' => 'required|string',
         'pdf' => 'nullable|mimes:pdf|max:2048',
     ]);
 
+    // ✅ Initialize $data from request so it always exists
+    $data = $request->only(['applicant_name', 'name', 'reference_number', 'status']);
+
+    // ✅ If user checked "remove PDF"
+    if ($request->has('remove_pdf') && $visa_status->pdf) {
+        if (Storage::disk('public')->exists($visa_status->pdf)) {
+            Storage::disk('public')->delete($visa_status->pdf);
+        }
+        $data['pdf'] = null; // remove from database
+    }
+
+    // ✅ Handle file upload if provided
     if ($request->hasFile('pdf')) {
+        // Delete old file if exists
+        if ($visa_status->pdf && Storage::disk('public')->exists($visa_status->pdf)) {
+            Storage::disk('public')->delete($visa_status->pdf);
+        }
+
+        // Store new file
         $data['pdf'] = $request->file('pdf')->store('visa-pdfs', 'public');
     }
 
+    // ✅ Update the record
     $visa_status->update($data);
+
     return redirect()->route('visa-track')->with('success', 'Visa record updated successfully!');
 }
+
 
 
     /**

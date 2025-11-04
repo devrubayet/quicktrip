@@ -183,6 +183,68 @@
                     </div>
                     <div class="col-md-3 col-sm-6">
                         <label class="form-label">To</label>
+                        <input type="text" class="form-control" list="datalistOptions" placeholder="Cox's Bazar" >
+                        <datalist id="datalistOptions">
+                            <option value="San Francisco">
+                            <option value="New York">
+                            <option value="Seattle">
+                            <option value="Los Angeles">
+                            <option value="Chicago">
+                        </datalist>
+                        <small>CXB, Cox's Bazar Airport</small>
+                    </div>
+
+                    <!-- Dates -->
+                    <div class="col-md-2 col-sm-6">
+                        <label for="depature" class="form-label">Departure Date</label>
+                        <input type="text" id="depature" class="form-control" value="" >
+                        <small >Sunday</small>
+                    </div>
+                    <div class="col-md-2 col-sm-6">
+                        <label for="return" class="form-label">Return Date</label>
+                        <input type="text" id="return" class="form-control" placeholder="Save more on return flight" >
+                    </div>
+
+                    <!-- Traveler -->
+                    <div class="col-md-2 col-sm-6">
+                        <label class="form-label">Traveler, Class</label>
+                        <input type="text" class="form-control" value="1 Traveler" readonly>
+                        <small>Economy</small>
+                    </div>
+
+                    <!-- Overlapping Button (must NOT be inside a Bootstrap column) -->
+                    <button type="submit" class="search-btn">Search</button>
+                </form>
+            </div>
+
+
+            <!-- Other Tabs -->
+            <div class="tab-pane fade " id="hotel">
+                <form class="search-box row g-4">
+                    <!-- Trip Type -->
+                    <div class="col-12 text-center">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="tripType" id="oneWay" checked>
+                            <label class="form-check-label" for="oneWay">One Way</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="tripType" id="roundWay">
+                            <label class="form-check-label" for="roundWay">Round Way</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="tripType" id="multiCity">
+                            <label class="form-check-label" for="multiCity">Multi City</label>
+                        </div>
+                    </div>
+
+                    <!-- From & To -->
+                    <div class="col-md-3 col-sm-6">
+                        <label class="form-label">From</label>
+                        <input type="text" class="form-control" value="Dhaka" readonly>
+                        <small>DAC, Hazrat Shahjalal International Ai...</small>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <label class="form-label">To</label>
                         <input type="text" class="form-control" value="Cox's Bazar" readonly>
                         <small>CXB, Cox's Bazar Airport</small>
                     </div>
@@ -210,11 +272,86 @@
                 </form>
             </div>
 
-            <!-- Other Tabs -->
-            <div class="tab-pane card fade" id="hotel">Hotel content here...</div>
-            <div class="tab-pane fade" id="tour">Tour content here...</div>
+            
+            <div class="tab-pane fade" id="tour">
+                <form class="search-box row g-4">
+                    <!-- Trip Type -->
+                    <div class="col-12 text-center">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="tripType" id="oneWay" checked>
+                            <label class="form-check-label" for="oneWay">One Way</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="tripType" id="roundWay">
+                            <label class="form-check-label" for="roundWay">Round Way</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="tripType" id="multiCity">
+                            <label class="form-check-label" for="multiCity">Multi City</label>
+                        </div>
+                    </div>
+
+                    <!-- From & To -->
+                    <div class="col-md-3 col-sm-6">
+                        <label class="form-label">From</label>
+                        <input type="text" class="form-control" value="Dhaka" readonly>
+                        <small>DAC, Hazrat Shahjalal International Ai...</small>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <label class="form-label">To</label>
+                        <input type="text" class="form-control" value="Cox's Bazar" readonly>
+                        <small>CXB, Cox's Bazar Airport</small>
+                    </div>
+
+                    <!-- Dates -->
+                    <div class="col-md-2 col-sm-6">
+                        <label class="form-label">Departure Date</label>
+                        <input type="text" class="form-control" value="28 Sep'25" readonly>
+                        <small>Sunday</small>
+                    </div>
+                    <div class="col-md-2 col-sm-6">
+                        <label class="form-label">Return Date</label>
+                        <input type="text" class="form-control" placeholder="Save more on return flight" readonly>
+                    </div>
+
+                    <!-- Traveler -->
+                    <div class="col-md-2 col-sm-6">
+                        <label class="form-label">Traveler, Class</label>
+                        <input type="text" class="form-control" value="1 Traveler" readonly>
+                        <small>Economy</small>
+                    </div>
+
+                    <!-- Overlapping Button (must NOT be inside a Bootstrap column) -->
+                    <button type="submit" class="search-btn">Search</button>
+                </form>
+            </div>
             <div class="tab-pane fade" id="visa">Visa content here...</div>
         </div>
     </div>
 </section>
+
+<script>
+    $(function() {
+      let start = moment().subtract(7, 'days');
+      let end = moment();
+
+      function cb(start, end) {
+        $('#depature').val(start.format('YYYY-MM-DD'));
+        $('#return').val(end.format('YYYY-MM-DD'));
+      }
+
+      // initialize daterangepicker (attached to body, not specific input)
+      $('#dep, #end_date').on('click', function() {
+        $('body').daterangepicker({
+          startDate: start,
+          endDate: end,
+          opens: 'center',
+          locale: {
+            format: 'YYYY-MM-DD',
+            cancelLabel: 'Clear'
+          }
+        }, cb).click(); // trigger click to open popup
+      });
+    });
+  </script>
 
