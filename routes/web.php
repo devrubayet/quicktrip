@@ -30,25 +30,25 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
     // Visa Tracking
     Route::get('/admin/visa-status', [VisaTrakController::class, 'index'])->name('admin.visa');
-    Route::get('/create-visatrack', [VisaTrakController::class, 'create'])->name('create-visa');
-    Route::post('/store-visa', [VisaTrakController::class, 'store'])->name('visa-store');
-    Route::get('/edit-visa/{id}', [VisaTrakController::class, 'edit'])->name('visa-edit');
-    Route::put('/update-visa/{id}', [VisaTrakController::class, 'update'])->name('visa-update');
-    Route::delete('/delete-visa/{id}', [VisaTrakController::class, 'destroy'])->name('visa-delete');
+    Route::get('/admin/create-visatrack', [VisaTrakController::class, 'create'])->name('create-visa');
+    Route::post('/admin/store-visa', [VisaTrakController::class, 'store'])->name('visa-store');
+    Route::get('/admin/edit-visa/{id}', [VisaTrakController::class, 'edit'])->name('visa-edit');
+    Route::put('/admin/update-visa/{id}', [VisaTrakController::class, 'update'])->name('visa-update');
+    Route::delete('/admin/delete-visa/{id}', [VisaTrakController::class, 'destroy'])->name('visa-delete');
     // POST for Visa Tracking AJAX JSON
     Route::post('/admin/visa-status', [VisaTrakController::class, 'indexAjax'])->name('visa-status.index');
 
     // Testimonial Urls
-    Route::get('/create-testimonial', [HomeController::class, 'createTestimonials'])->name('create-testi');
-    Route::post('/store-testimonial', [HomeController::class, 'storeTestimonial'])->name('store-testi');
+    Route::get('/admin/create-testimonial', [HomeController::class, 'createTestimonials'])->name('create-testi');
+    Route::post('/admin/store-testimonial', [HomeController::class, 'storeTestimonial'])->name('store-testi');
 
 
     // Airlines Urls
-    Route::get('/all-airlines', [HomeController::class, 'showAirlines'])->name('showAirlines');
-    Route::get('/create-airline', [HomeController::class, 'CreateAirline'])->name('create-airline');
-    Route::post('/create-airline', [HomeController::class, 'storeAirline'])->name('store-airline');
-    Route::get('/edit-airline/{id}', [HomeController::class, 'editAirline'])->name('edit-airline');
-    Route::put('/update-airline/{id}', [HomeController::class, 'updateAirline'])->name('update-airline');
+    Route::get('/admin/all-airlines', [HomeController::class, 'showAirlines'])->name('showAirlines');
+    Route::get('/admin/create-airline', [HomeController::class, 'CreateAirline'])->name('create-airline');
+    Route::post('/admin/create-airline', [HomeController::class, 'storeAirline'])->name('store-airline');
+    Route::get('/admin/edit-airline/{id}', [HomeController::class, 'editAirline'])->name('edit-airline');
+    Route::put('/admin/update-airline/{id}', [HomeController::class, 'updateAirline'])->name('update-airline');
 
     
 
@@ -57,11 +57,11 @@ Route::middleware(['auth', 'admin'])->group(function () {
     // });
 
     // Our service List Urls
-    Route::get('/all-slider', [OurServiceSliderController::class, 'index'])->name('all-slider');
-    Route::get('/services-create', [OurServiceSliderController::class, 'create'])->name('service-create');
-    Route::post('/services-store', [OurServiceSliderController::class, 'store'])->name('services-store');
-    Route::put('/services-update/{id}', [OurServiceSliderController::class, 'update'])->name('services-update');
-    Route::get('/services-edit/{id}', [OurServiceSliderController::class, 'edit'])->name('services-edit');
+    Route::get('/admin/all-slider', [OurServiceSliderController::class, 'index'])->name('all-slider');
+    Route::get('/admin/services-create', [OurServiceSliderController::class, 'create'])->name('service-create');
+    Route::post('/admin/services-store', [OurServiceSliderController::class, 'store'])->name('services-store');
+    Route::put('/admin/services-update/{id}', [OurServiceSliderController::class, 'update'])->name('services-update');
+    Route::get('/admin/services-edit/{id}', [OurServiceSliderController::class, 'edit'])->name('services-edit');
     Route::delete('/admin/our-services/{id}', [OurServiceSliderController::class, 'destroy'])->name('services-destroy');
     Route::patch('/admin/our-services/{id}/toggle', [OurServiceSliderController::class, 'toggle'])->name('services-toggle');
 
@@ -70,12 +70,12 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::put('/admin/settings/{id}', [SiteSettingsController::class, 'update'])->name('settings-update');
 
     // Bank Details Urls
-    Route::get('/all-bank',[BankController::class,'index'])->name('all-bank');
-    Route::get('/bank-create',[BankController::class,'create'])->name('bank-create');
-    Route::post('/bank-store',[BankController::class,'store'])->name('bank.store');
-    Route::get('/bank-edit/{id}',[BankController::class,'edit'])->name('bank.edit');
-    Route::put('/bank-update/{id}',[BankController::class,'update'])->name('bank.update');
-    Route::delete('/admin/bank/{id}', [BankController::class, 'destroy'])->name('bank-destroy');
+    Route::get('/admin/all-bank',[BankController::class,'index'])->name('all-bank');
+    Route::get('/admin/bank-create',[BankController::class,'create'])->name('bank-create');
+    Route::post('/admin/bank-store',[BankController::class,'store'])->name('bank.store');
+    Route::get('/admin/bank-edit/{id}',[BankController::class,'edit'])->name('bank.edit');
+    Route::put('/admin/bank-update/{id}',[BankController::class,'update'])->name('bank.update');
+    Route::delete('/admin/bank-delete/{id}', [BankController::class, 'destroy'])->name('bank-destroy');
 
 
 });
