@@ -81,7 +81,7 @@
                     <div class="card border-0 shadow-sm p-3 mt-3">
                         <h5 class="fw-bold text-success mb-3">Application Found ✅</h5>
                         <p><strong>Reference Number:</strong> ${data.data.reference_number}</p>
-                        <p><strong>Visa Name:</strong> ${data.data.name}</p>
+                        
                         <p><strong>Status:</strong>
                             <span class="badge bg-${data.data.status === 'Approved' ? 'success' : 'warning'}">
                                 ${data.data.status}
