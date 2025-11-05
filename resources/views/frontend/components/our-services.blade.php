@@ -6,8 +6,8 @@
 </style>
 <!-- Our Services Section -->
 @if ($ourservices ->isNotEmpty())
-  <section  class="py-5 bg-white text-center">
-  <div data-aos="fade-up" data-aos-delay="0.5ms class="container">
+  <section  class=" py-5 bg-white text-center">
+  <div data-aos="fade-up" data-aos-delay="0.5ms" class="container">
     <h2 class="mb-4">Our Services</h2>
     <hr class="my-4">
 
