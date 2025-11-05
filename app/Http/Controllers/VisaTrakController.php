@@ -180,7 +180,7 @@ public function indexAjax(Request $request) {
         // রেকর্ড ডিলিট করো
         $visa->delete();
 
-        return redirect()->route('visa-track');
+        return redirect()->route('admin.visa');
     } catch (\Exception $e) {
         return response()->json([
             'success' => false,

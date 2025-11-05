@@ -158,6 +158,7 @@ class HomeController extends Controller
 
 
     function Contact(){
-        return view('frontend.pages.contact');
+        $banks= BankDetail::all();
+        return view('frontend.pages.contact', compact('bank'));
     }
 }
