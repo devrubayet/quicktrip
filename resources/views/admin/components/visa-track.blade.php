@@ -91,10 +91,10 @@
                                 : 'N/A'}
                         </td>
                         <td>
-                            <a href="/edit-visa/${item.id}"
+                            <a href="/admin/edit-visa/${item.id}"
                                                 class="btn btn-primary btn-sm">Edit</a>
                                                 
-                            <form class="delete-form" action="/delete-visa/${item.id}"
+                            <form class="delete-form" action="/admin/delete-visa/${item.id}"
                                 method="POST" style="display:inline-block;">
                                 @csrf
                                 @method('DELETE')
