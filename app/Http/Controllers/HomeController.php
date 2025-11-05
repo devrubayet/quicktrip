@@ -155,4 +155,9 @@ class HomeController extends Controller
             ->success('Service Slider has been saved!');
         return redirect()->route('showAirlines');
     }
+
+
+    function Contact(){
+        return view('frontend.pages.contact');
+    }
 }

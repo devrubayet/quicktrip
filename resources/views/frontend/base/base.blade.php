@@ -121,7 +121,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="menu-item nav-link" href="">Contact Us</a>
+                        <a class="menu-item nav-link" href="{{ route('contact-us') }}">Contact Us</a>
                     </li>
                     <li class="nav-item px-2">
                         <button type="button" class="btn btn-blue px-4 fw-bold py-2" data-bs-toggle="modal"

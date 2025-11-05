@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::post('/', [VisaTrakController::class, 'visa_track'])->name('visa-find');
 Route::get('/our-service', [OurServiceSliderController::class, 'index'])->name('our-service');
+Route::get('/contact-us', [HomeController::class, 'Contact'])->name('contact-us');
 
 
 Route::get('/dashboard', [UserController::class, 'Dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
