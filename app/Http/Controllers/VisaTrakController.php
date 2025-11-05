@@ -159,7 +159,7 @@ public function indexAjax(Request $request) {
     // ✅ Update the record
     $visa_status->update($data);
 
-    return redirect()->route('visa-track')->with('success', 'Visa record updated successfully!');
+    return redirect()->route('admin.visa')->with('success', 'Visa record updated successfully!');
 }
 
 
