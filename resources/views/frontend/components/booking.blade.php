@@ -126,11 +126,11 @@
 
 
 <section  class="container-fluid text-center py-5 position-relative  bg-light">
-    <div data-aos="fade-up" data-aos-delay="0.5ms"
+    <div 
       class="container py-5 mx-auto booking d-flex flex-column align-items-center">
 
         <!-- Tabs (on top, overlapping) -->
-        <div  class="booking-tabs shadow">
+        <div data-aos="fade-up" data-aos-delay="0.5ms" class="booking-tabs shadow">
             <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
                 <li class="nav-item">
                     <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#flight">
