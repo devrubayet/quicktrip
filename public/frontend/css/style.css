@@ -397,3 +397,34 @@ body, html{
             max-height: 50px;
             object-fit: cover;
         }
+
+
+        .service-slide {
+        width: 100%;
+        max-width: 1100px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    .carousel-indicators [data-bs-target] {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #007bff;
+    }
+
+    .carousel-indicators .active {
+        background-color: #0056b3;
+    }
+
+    .carousel-indicators {
+        justify-content: center;
+        gap: 8px;
+    }
+
+    @media (max-width: 768px) {
+        .service-slide {
+            height: 180px;
+        }
+    }
