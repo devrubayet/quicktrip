@@ -233,7 +233,7 @@
             // Fully remove after animation
             setTimeout(() => {
                 preloader.remove(); // পুরো DOM থেকে মুছে ফেলবে
-            }, 600);
+            }, 0.5);
         });
 
 
