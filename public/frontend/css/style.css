@@ -399,12 +399,18 @@ body, html{
         }
 
 
-        .service-slide {
-        width: 100%;
-        max-width: 1100px;
-        height: 250px;
-        object-fit: cover;
+        .carousel-inner {
+        padding: 10px;
+    }
+
+    .card {
         border-radius: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     }
 
     .carousel-indicators [data-bs-target] {
@@ -418,13 +424,11 @@ body, html{
         background-color: #0056b3;
     }
 
-    .carousel-indicators {
-        justify-content: center;
-        gap: 8px;
-    }
-
     @media (max-width: 768px) {
-        .service-slide {
-            height: 180px;
+        .col-md-4 {
+            flex: 0 0 80%;
+            max-width: 80%;
         }
     }
+
+ 
