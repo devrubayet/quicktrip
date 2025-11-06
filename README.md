@@ -1,6 +1,6 @@
 <!-- Project Banner -->
 <p align="center">
-  <img src="https://www.quicktripbd.com/logo.png" alt="QuickTrip Logo" width="250"/>
+  <img src="https://www.quicktripbd.com/logo.png](https://www.quicktripbd.com/storage/settings/tKhUpDBPWZJSs7IF9TQAxjYv1AbbiuiL6Ebzhcii.png" alt="QuickTrip Logo" width="250"/>
 </p>
 
 <h1 align="center">🌍 QuickTrip — Travel Simplified</h1>
@@ -12,7 +12,8 @@
   <a href="#tech-stack">🧩 Tech Stack</a> •
   <a href="#getting-started">⚙️ Setup</a>
 </p>
-
+<iframe src="https://www.quicktripbd.com">
+</iframe>
 <p align="center">
   <!-- GitHub Badges -->
   <img src="https://img.shields.io/github/license/yourusername/quicktripbd?style=flat-square" alt="License" />
@@ -68,3 +69,23 @@ QuickTrip/
 ├── routes/            # Web and API route definitions
 ├── database/          # Migrations and seeders
 └── config/            # App configurations
+# Clone the repository
+git clone https://github.com/yourusername/quicktripbd.git
+
+# Move into the project directory
+cd quicktripbd
+
+# Install dependencies
+composer install
+npm install
+
+# Copy environment file and generate app key
+cp .env.example .env
+php artisan key:generate
+
+# Set up your database in .env
+php artisan migrate --seed
+
+# Run the development server
+npm run dev
+php artisan serve
