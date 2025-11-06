@@ -38,8 +38,10 @@
 <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
 />
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
     <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}" />
 
@@ -226,6 +228,7 @@
     <script>
         AOS.init();
     </script>
+    
     <script>
         // window.addEventListener("load", function() {
         //     const preloader = document.getElementById("preloader");
@@ -258,6 +261,8 @@
             });
         });
     </script>
+
+
 </body>
 
 </html>

@@ -11,7 +11,7 @@
         </nav>
     </div>
     <div class="container mx-auto col-md-6 p-5">
-        <form method="POST" enctype="multipart/form-data">
+        <form action="{{ route('store-testi') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label for="name">Name</label>

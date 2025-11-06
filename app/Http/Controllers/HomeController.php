@@ -19,6 +19,7 @@ class HomeController extends Controller
         $testimonials = Testimonial::all();
         $airlines = Airline::all();
         $banks = BankDetail::all();
+        
 
         return view('frontend.pages.home', compact('ourservices','testimonials','airlines','banks'));
     }
@@ -56,7 +57,8 @@ class HomeController extends Controller
 
     function storeTestimonial(Request $request){
 
-        $request->validate([
+       try {
+         $request->validate([
             'name' => 'required|string|max:255',
             'bio' => 'required|string|max:255',
             'message' => 'required|string',
@@ -86,6 +88,10 @@ class HomeController extends Controller
             ->option('ltr', true)               // Right-to-left support
             ->success('Service Slider has been saved!');
         return redirect()->route('create-testi');
+       } catch (\Exception  $e) {
+            flash()->addError('Something went wrong: ' . $e->getMessage());
+        return redirect()->back();
+        }
     }
 
 
