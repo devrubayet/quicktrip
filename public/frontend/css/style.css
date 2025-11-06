@@ -400,35 +400,27 @@ body, html{
 
 
         .carousel-inner {
-        padding: 10px;
-    }
+    display: flex;
+  }
 
-    .card {
-        border-radius: 20px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+  .carousel-item {
+    flex: 0 0 calc(100% / 3);
+    transition: transform 0.5s ease;
+    display: block;
+  }
 
-    .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    }
+  .card {
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 
-    .carousel-indicators [data-bs-target] {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: #007bff;
-    }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
 
-    .carousel-indicators .active {
-        background-color: #0056b3;
+  @media (max-width: 768px) {
+    .carousel-item {
+      flex: 0 0 100%;
     }
-
-    @media (max-width: 768px) {
-        .col-md-4 {
-            flex: 0 0 80%;
-            max-width: 80%;
-        }
-    }
-
- 
+  }
