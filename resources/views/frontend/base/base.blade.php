@@ -105,7 +105,7 @@
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Visa
                         </a>
-                        <ul class="dropdown-menu text-light" aria-labelledby="dropdownMenuLink">
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 
                             <li>
                                 <a class="dropdown-item" href="#">visa name</a>

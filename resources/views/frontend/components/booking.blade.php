@@ -136,7 +136,7 @@
 </style>
 
 
-<section class="container-fluid text-center py-5 position-relative  bg-light">
+<section class=" text-center py-5 position-relative  bg-light">
 
 
     <div class="container py-5 mx-auto booking d-flex flex-column align-items-center">

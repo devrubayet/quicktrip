@@ -112,11 +112,40 @@ body, html{
     font-weight: 500;
     color: #333333; /* Adjust text color */
     text-decoration: none;
+       
+transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth hover effect */
   }
   .menu-item:hover {
     color: #ff416c; /* Add hover effect */
     text-decoration: underline;
   }
+
+  /* Dropdown menu appearance */
+.dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.9s ease, transform 0.5s ease;
+    transform: translateY(10px); /* ছোট slide-up effect */
+}
+
+.dropdown.show .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    outline: none !important;
+    border: none !important;
+}
+
+
+/* Dropdown items hover effect */
+.dropdown-menu a {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: #090979;
+    color: #fff;
+}
 
   .carousel-item img{
     height: 400px;
@@ -192,19 +221,7 @@ body, html{
     background-color: #e8e7e7;
 }
 
-.dropdown-menu{
-    background: #00bce1 !important;
-    overflow: hidden !important;
-    outline: none !important;
-    border: none !important;
-  }
-.dropdown-item{
-    color: white !important;
-}
-.dropdown-item:hover{
-    color: #ff416c !important;
-    background: transparent !important;
-}
+
 
 
 
@@ -242,21 +259,7 @@ body, html{
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.custom-indicator {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #dee2e6;
-  border: none;
-  margin: 0 5px;
-}
 
-.custom-indicator.active {
-  background-color: #0d6efd;
-  width: 30px;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-}
 
 /* booking page  */
 .search-box {
