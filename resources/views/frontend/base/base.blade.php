@@ -91,7 +91,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul data-aos="fade-right" data-aos-delay="103ms" class="navbar-nav">
                     <li class="nav-item">
-                        <a class="menu-item nav-link" href="">Home</a>
+                        <a class="menu-item nav-link" href=" {{ route('home') }}">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link menu-item dropdown-toggle" href="#" id="dropdownMenuLink"
