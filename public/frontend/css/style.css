@@ -423,4 +423,13 @@ body, html{
 
     
 
-  
+  .modal-backdrop {
+
+    z-index: initial;
+    overflow: hidden;
+}
+
+.modal {
+    z-index: 1050 !important;
+    
+}
