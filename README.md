@@ -1,6 +1,6 @@
 <!-- Project Banner -->
 <p align="center">
-  <img src="https://www.quicktripbd.com/logo.png](https://www.quicktripbd.com/storage/settings/tKhUpDBPWZJSs7IF9TQAxjYv1AbbiuiL6Ebzhcii.png" alt="QuickTrip Logo" width="250"/>
+  <img src="https://www.quicktripbd.com/storage/settings/tKhUpDBPWZJSs7IF9TQAxjYv1AbbiuiL6Ebzhcii.png" alt="QuickTrip Logo" width="250"/>
 </p>
 
 <h1 align="center">🌍 QuickTrip — Travel Simplified</h1>
