@@ -18,10 +18,10 @@ body, html{
 }
 .banner{
   background: linear-gradient(85deg, rgba(23, 23, 27, 0.57) 0%,rgba(255, 255, 255, 0.03) 60%),
-      url('../img/bg-banner1.png');
+      url('https://cdn.pixabay.com/video/2020/01/18/31377-386628887_large.mp4');
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
+    
     color: #090979;
 
 
