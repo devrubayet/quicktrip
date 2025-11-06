@@ -86,18 +86,18 @@
             </div>
         </li>
 
-        <li class="nav-item menu-items {{ request()->routeIs('feedback.*') ? 'active' : '' }}">
+        <li class="nav-item menu-items {{ request()->routeIs('all-testi.*') ? 'active' : '' }}">
             <a class="nav-link" data-toggle="collapse" href="#feedback-menu"
-                aria-expanded="{{ request()->routeIs('feedback.*') ? 'true' : 'false' }}"
+                aria-expanded="{{ request()->routeIs('all-testi.*') ? 'true' : 'false' }}"
                 aria-controls="feedback-menu">
                 <span class="menu-icon"><i class="mdi mdi-message"></i></span>
                 <span class="menu-title">Feedback</span>
                 <i class="menu-arrow"></i>
             </a>
-            <div class="collapse {{ request()->routeIs('feedback.*') ? 'show' : '' }}" id="feedback-menu">
+            <div class="collapse {{ request()->routeIs('all-testi.*') ? 'show' : '' }}" id="feedback-menu">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item {{ request()->routeIs('feedback.index') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('create-testi') }}">
+                    <li class="nav-item {{ request()->routeIs('all-testi') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('all-testi') }}">
                             <span class="menu-icon"><i class="mdi mdi-message-text"></i></span>
                             All Feedback
                         </a>

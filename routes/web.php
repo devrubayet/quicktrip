@@ -1,11 +1,13 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AirlineController;
 use App\Http\Controllers\BankController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OurServiceSliderController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SiteSettingsController;
+use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VisaTrakController;
 use Illuminate\Support\Facades\Route;
@@ -40,16 +42,22 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::post('/admin/visa-status', [VisaTrakController::class, 'indexAjax'])->name('visa-status.index');
 
     // Testimonial Urls
-    Route::get('/admin/create-testimonial', [HomeController::class, 'createTestimonials'])->name('create-testi');
-    Route::post('/admin/store-testimonial', [HomeController::class, 'storeTestimonial'])->name('store-testi');
+    Route::get('/admin/all-testimonial', [TestimonialController::class, 'index'])->name('all-testi');
+    Route::get('/admin/create-testimonial', [TestimonialController::class, 'createTestimonials'])->name('create-testi');
+    Route::post('/admin/store-testimonial', [TestimonialController::class, 'storeTestimonial'])->name('store-testi');
+    Route::get('/admin/edit-testimonial/{id}', [TestimonialController::class, 'edit'])->name('edit-testi');
+    Route::put('/admin/update-testimonial/{id}', [TestimonialController::class, 'update'])->name('update-testi');
+    Route::delete('/admin/delete-testimonial/{id}', [TestimonialController::class, 'destroy'])->name('delete-testi');
+
 
 
     // Airlines Urls
-    Route::get('/admin/all-airlines', [HomeController::class, 'showAirlines'])->name('showAirlines');
-    Route::get('/admin/create-airline', [HomeController::class, 'CreateAirline'])->name('create-airline');
-    Route::post('/admin/create-airline', [HomeController::class, 'storeAirline'])->name('store-airline');
-    Route::get('/admin/edit-airline/{id}', [HomeController::class, 'editAirline'])->name('edit-airline');
-    Route::put('/admin/update-airline/{id}', [HomeController::class, 'updateAirline'])->name('update-airline');
+    Route::get('/admin/all-airlines', [AirlineController::class, 'index'])->name('showAirlines');
+    Route::get('/admin/create-airline', [AirlineController::class, 'create'])->name('create-airline');
+    Route::post('/admin/create-airline', [AirlineController::class, 'store'])->name('store-airline');
+    Route::get('/admin/edit-airline/{id}', [AirlineController::class, 'edit'])->name('edit-airline');
+    Route::put('/admin/update-airline/{id}', [AirlineController::class, 'update'])->name('update-airline');
+    Route::delete('/admin/delete-airline/{id}', [AirlineController::class, 'destroy'])->name('delete-airline');
 
     
 

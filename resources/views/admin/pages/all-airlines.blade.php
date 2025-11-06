@@ -39,7 +39,7 @@
 
                                         <td><a href="{{ route('edit-airline', $airline->id) }}"
                                                 class="btn btn-primary btn-sm">Edit</a>
-                                            <form class="delete-form" action="{{ route('services-destroy', $airline->id) }}"
+                                            <form class="delete-form" action="{{ route('delete-airline', $airline->id) }}"
                                                 method="POST" style="display:inline-block;">
                                                 @csrf
                                                 @method('DELETE')
