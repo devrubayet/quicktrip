@@ -12,13 +12,20 @@
 
 <section   class="banner py-5 ">
 
+    <video autoplay muted loop id="bannerVideo">
+    <source src="{{asset('frontend/bg-banner.mp4')}}" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+
+  <div class="banner-content">
     <h2 class="mx-auto text-light px-5">Track & Retrieve your Passport</h2>
     <hr class="container-fluid">
 
 
     <div class="container  py-5 ">
 
-            <div class="track  col-12 h-100 my-5  d-flex justify-content-center">
+            <div class="track  col-12 h-100 my-2  d-flex justify-content-center">
                 <div class="box col-md-6">
 
                    
@@ -36,6 +43,9 @@
 
 
     </div>
+  </div>
+
+    
 
 
   </section>
