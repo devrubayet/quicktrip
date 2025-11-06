@@ -30,16 +30,16 @@
                         <div data-aos="fade-right" class="col-4 col-sm-3 col-md-2 bg-light border rounded mb-3">
                             <img src="{{ asset('frontend/img/BKash-Horizontal-Logo.svg') }}" class="img-fluid" alt="Visa" />
                         </div>
-                        <div data-aos="fade-top" class="col-4 col-sm-3 col-md-2 bg-light border rounded mb-3">
+                        <div data-aos="fade-down" class="col-4 col-sm-3 col-md-2 bg-light border rounded mb-3">
                             <img src="{{ asset('frontend/img/Master-Card-Logo.svg') }}" class="img-fluid" alt="Visa" />
                         </div>
-                        <div data-aos="fade-bottom" class="col-4 col-sm-3 col-md-2 bg-light border rounded mb-3">
+                        <div data-aos="fade-up" class="col-4 col-sm-3 col-md-2 bg-light border rounded mb-3">
                             <img src="{{ asset('frontend/img/Nagad-Horizontal-Logo.svg') }}" class="img-fluid" alt="Visa" />
                         </div>
                         <div data-aos="fade-left" class="col-4 col-sm-3 col-md-2 bg-light border rounded mb-3">
                             <img src="{{ asset('frontend/img/Visa-Card-Logo.svg') }}" class="img-fluid" alt="Visa" />
                         </div>
-                        <div data-aos="fade-right" class="col-4 col-sm-3 col-md-2 bg-light border rounded mb-3">
+                        <div data-aos="fade-up" class="col-4 col-sm-3 col-md-2 bg-light border rounded mb-3">
                             <img src="{{ asset('frontend/img/sslcommerce.png') }}" class="img-fluid" alt="Visa" />
                         </div>
                     </div>
