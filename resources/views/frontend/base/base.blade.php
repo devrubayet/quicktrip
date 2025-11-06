@@ -36,6 +36,11 @@
 <!-- Daterangepicker CSS + JS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
     <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}" />
 
 
