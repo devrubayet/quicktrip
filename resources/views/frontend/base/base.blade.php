@@ -43,13 +43,13 @@
 
 <body>
     <!-- Spinner -->
-    <div id="preloader" class="d-flex justify-content-center align-items-center"
+    {{-- <div id="preloader" class="d-flex d-none justify-content-center align-items-center"
         style="position: fixed; top:0; left:0; width:100%; height:100%;
                 background:#fff; z-index:9999;">
         <div class="spinner-border text-primary" role="status">
             <span class="visually-hidden">Loading...</span>
         </div>
-    </div>
+    </div> --}}
 
     <header class="container-fluid top-bar d-sm-block">
         <!-- Top Bar -->
@@ -222,19 +222,19 @@
         AOS.init();
     </script>
     <script>
-        window.addEventListener("load", function() {
-            const preloader = document.getElementById("preloader");
+        // window.addEventListener("load", function() {
+        //     const preloader = document.getElementById("preloader");
 
-            // Fade out smoothly
-            preloader.style.transition = "opacity 0.5s ease, visibility 0.5s ease";
-            preloader.style.opacity = "0";
-            preloader.style.visibility = "hidden";
+        //     // Fade out smoothly
+        //     preloader.style.transition = "opacity 0.5s ease, visibility 0.5s ease";
+        //     preloader.style.opacity = "0";
+        //     preloader.style.visibility = "hidden";
 
-            // Fully remove after animation
-            setTimeout(() => {
-                preloader.remove(); // পুরো DOM থেকে মুছে ফেলবে
-            }, 0.5);
-        });
+        //     // Fully remove after animation
+        //     setTimeout(() => {
+        //         preloader.remove(); // পুরো DOM থেকে মুছে ফেলবে
+        //     }, 0.1);
+        // });
 
 
         document.addEventListener("DOMContentLoaded", function() {
