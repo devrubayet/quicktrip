@@ -24,22 +24,22 @@
                 <div class="container py-5">
                     <h5 class="text-white mb-4">Payment Methods</h5>
                     <div class="payment row text-center justify-content-center gap-2 align-items-center">
-                        <div class="col-4 col-sm-3 col-md-2 bg-light border rounded mb-3">
+                        <div data-aos="fade-left" class="col-4 col-sm-3 col-md-2 bg-light border rounded mb-3">
                             <img src="{{ asset('frontend/img/American-Express-Logo.svg') }}" class="img-fluid" alt="Visa" />
                         </div>
-                        <div class="col-4 col-sm-3 col-md-2 bg-light border rounded mb-3">
+                        <div data-aos="fade-right" class="col-4 col-sm-3 col-md-2 bg-light border rounded mb-3">
                             <img src="{{ asset('frontend/img/BKash-Horizontal-Logo.svg') }}" class="img-fluid" alt="Visa" />
                         </div>
-                        <div class="col-4 col-sm-3 col-md-2 bg-light border rounded mb-3">
+                        <div data-aos="fade-top" class="col-4 col-sm-3 col-md-2 bg-light border rounded mb-3">
                             <img src="{{ asset('frontend/img/Master-Card-Logo.svg') }}" class="img-fluid" alt="Visa" />
                         </div>
-                        <div class="col-4 col-sm-3 col-md-2 bg-light border rounded mb-3">
+                        <div data-aos="fade-bottom" class="col-4 col-sm-3 col-md-2 bg-light border rounded mb-3">
                             <img src="{{ asset('frontend/img/Nagad-Horizontal-Logo.svg') }}" class="img-fluid" alt="Visa" />
                         </div>
-                        <div class="col-4 col-sm-3 col-md-2 bg-light border rounded mb-3">
+                        <div data-aos="fade-left" class="col-4 col-sm-3 col-md-2 bg-light border rounded mb-3">
                             <img src="{{ asset('frontend/img/Visa-Card-Logo.svg') }}" class="img-fluid" alt="Visa" />
                         </div>
-                        <div class="col-4 col-sm-3 col-md-2 bg-light border rounded mb-3">
+                        <div data-aos="fade-right" class="col-4 col-sm-3 col-md-2 bg-light border rounded mb-3">
                             <img src="{{ asset('frontend/img/sslcommerce.png') }}" class="img-fluid" alt="Visa" />
                         </div>
                     </div>
