@@ -21,7 +21,7 @@ body, html{
       url('https://cdn.pixabay.com/video/2020/01/18/31377-386628887_large.mp4');
     background-size: cover;
     background-position: center;
-    
+    max-height:50%;
     color: #090979;
 
 
