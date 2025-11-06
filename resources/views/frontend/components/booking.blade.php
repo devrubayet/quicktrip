@@ -137,8 +137,11 @@
 
 
 <section class="container-fluid text-center py-5 position-relative  bg-light">
-    <div class="container py-5 mx-auto booking d-flex flex-column align-items-center">
 
+
+    <div class="container py-5 mx-auto booking d-flex flex-column align-items-center">
+        <h2 class="mb-4">Our Services</h2>
+    <hr class="my-4">
         <div data-aos="fade-up" data-aos-delay="0.5ms" class="">
             <!-- Tabs (on top, overlapping) -->
             <div data-aos="fade-up" data-aos-delay="0.5ms" class="booking-tabs shadow">
