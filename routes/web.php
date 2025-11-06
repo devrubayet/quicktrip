@@ -53,10 +53,10 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
     // Airlines Urls
     Route::get('/admin/all-airlines', [AirlineController::class, 'index'])->name('showAirlines');
-    Route::get('/admin/create-airline', [AirlineController::class, 'create'])->name('create-airline');
-    Route::post('/admin/create-airline', [AirlineController::class, 'store'])->name('store-airline');
-    Route::get('/admin/edit-airline/{id}', [AirlineController::class, 'edit'])->name('edit-airline');
-    Route::put('/admin/update-airline/{id}', [AirlineController::class, 'update'])->name('update-airline');
+    Route::get('/admin/create-airline', [AirlineController::class, 'createAir'])->name('create-airline');
+    Route::post('/admin/create-airline', [AirlineController::class, 'storeAir'])->name('store-airline');
+    Route::get('/admin/edit-airline/{id}', [AirlineController::class, 'editAir'])->name('edit-airline');
+    Route::put('/admin/update-airline/{id}', [AirlineController::class, 'updateAir'])->name('update-airline');
     Route::delete('/admin/delete-airline/{id}', [AirlineController::class, 'destroy'])->name('delete-airline');
 
     

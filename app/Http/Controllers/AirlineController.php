@@ -20,7 +20,7 @@ class AirlineController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function createAir()
     {
          return view('admin.components.create-airline');
     }
@@ -28,7 +28,7 @@ class AirlineController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-   function store(Request $request){
+   function storeAir(Request $request){
         $request->validate([
             'name' => 'required|string|max:100',
             'image' => "required|mimes:png,jpg"
@@ -54,12 +54,12 @@ class AirlineController extends Controller
             ->success('Airline has been saved!');
         return redirect()->route('create-airline');
     }
-    function edit($id){
+    function editAir($id){
         $airline= Airline::findOrFail($id);
         return view('admin.components.create-airline', compact('airline'));
 
     }
-     function update(Request $request ,$id){
+     function updateAir(Request $request ,$id){
         $airline = Airline::findOrFail($id);
         $request->validate([
             'name' => 'required|string|max:100',
