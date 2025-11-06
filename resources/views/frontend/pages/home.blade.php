@@ -48,7 +48,7 @@
   @include('frontend.components.booking')
 
   @include("frontend.components.testimonial")
-
+  @include('frontend.components.iframe')
 
   @include("frontend.components.airlines")
 
