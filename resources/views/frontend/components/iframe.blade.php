@@ -1,10 +1,18 @@
 <section class="py-5 bg-light text-center">
     <div class="container">
-        <div class="ratio ratio-16x9 rounded-2" >
-  <iframe class="ratio raito-16x9 rounded-5 border-0" id="ytplayer" type="text/html" 
-src="https://www.youtube.com/embed/JZnW4UrXF0I"
-frameborder="0" allowfullscreen autoplay='true'>
+        <div class="ratio ratio-16x9 rounded-2">
+  <iframe
+    class="rounded-5 border-0"
+    id="ytplayer"
+    type="text/html"
+    src="https://www.youtube.com/embed/JZnW4UrXF0I?autoplay=1&mute=1&controls=0"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+  </iframe>
 </div>
+
 
     </div>
 </section>
