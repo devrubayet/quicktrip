@@ -58,19 +58,7 @@
         </div>
     </div> --}}
 
-    <header class="container-fluid top-bar d-sm-block">
-        <!-- Top Bar -->
-        <div class="container d-flex   ">
-            <!-- Left Side (Languages) -->
-            <div class="">
-                <span>Notice:</span>
-            </div>
-            <div class="flex-grow-1">
-                <marquee class="font-family-arial">
-                    {{ $site_infos->notice ?? 'My Website' }}</marquee>
-            </div>
-        </div>
-    </header>
+    
 
 
     <!-- navbar -->
