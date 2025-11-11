@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <h5 class="fw-bold text-success mb-3">Application Found ✅</h5>
                         <p><strong>Applicant Name:</strong> ${data.data.applicant_name}</p>
                         <p><strong>Reference Number:</strong> ${data.data.reference_number}</p>
-                        <p><strong>Passport Number:</strong> ${data.data.visaname}</p>
+                        <p><strong>Passport Number:</strong> ${data.data.name}</p>
                         <p><strong>Status:</strong> <span class="badge bg-${data.data.status==='Approved'?'success':'warning'}">${data.data.status}</span></p>
                         
                         ${data.data.pdf ? `<p><strong>Your Visa PDF:</strong> <a href="storage/${data.data.pdf}" target="_blank" class="btn btn-outline-primary btn-sm">Download PDF</a></p>` : '<p><strong>Your Visa PDF:</strong> Not Available</p>'}
