@@ -221,9 +221,11 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+        const visaFindUrl = {{ route('visa-find') }};
     </script>
     <script src="{{ asset('frontend/js/main.js') }}"></script>
     <script>
+        
         // window.addEventListener("load", function() {
         //     const preloader = document.getElementById("preloader");
 

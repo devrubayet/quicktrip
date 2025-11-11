@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         visaModal.show();
 
-        fetch("{{ route('visa-find') }}", {
+        fetch(visaFindUrl, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
