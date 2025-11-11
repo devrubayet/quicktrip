@@ -222,7 +222,7 @@
     <script>
         AOS.init();
     </script>
-    
+    <script src="{{ asset('frontend/js/main.js') }}"></script>
     <script>
         // window.addEventListener("load", function() {
         //     const preloader = document.getElementById("preloader");
@@ -239,21 +239,7 @@
         // });
 
 
-        document.addEventListener("DOMContentLoaded", function() {
-            const dropdowns = document.querySelectorAll(".dropdown");
-
-            dropdowns.forEach((dropdown) => {
-                dropdown.addEventListener("mouseenter", function() {
-                    this.classList.add("show");
-                    this.querySelector(".dropdown-menu").classList.add("show");
-                });
-
-                dropdown.addEventListener("mouseleave", function() {
-                    this.classList.remove("show");
-                    this.querySelector(".dropdown-menu").classList.remove("show");
-                });
-            });
-        });
+        
     </script>
 
 

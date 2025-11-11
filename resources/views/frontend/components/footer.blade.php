@@ -52,12 +52,5 @@
 </footer>
 
 <style>
-.footer {
-  overflow: hidden; /* prevents any accidental overflow from payment images */
-}
-.footer .payment img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
+
 </style>

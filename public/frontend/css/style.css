@@ -110,7 +110,7 @@ body, html{
   .menu-item {
     font-size: 16px;
     font-weight: 500;
-    color: #333333; /* Adjust text color */
+    color: #fffafa; /* Adjust text color */
     text-decoration: none;
        
 transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth hover effect */
@@ -164,9 +164,15 @@ transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth hover effect *
 
  /* footer */
 
+.footer .payment img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
  .footer {
     background: #090979;
     color: #fff;
+    overflow: hidden; /* prevents any accidental overflow from payment images */
     padding-top: 50px;
   }
   .footer h5 {
@@ -259,7 +265,33 @@ transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth hover effect *
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+ .testimonialSwiper {
+        overflow: hidden !important;
+        width: 100%;
+    }
 
+    .testimonialSwiper .swiper-slide {
+        display: flex;
+        justify-content: center;
+    }
+
+    .testimonial-card {
+        width: 100%;
+        max-width: 900px;
+        border: 1px solid #eee;
+        border-radius: 20px;
+        background: #fff;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .quote-icon {
+        position: absolute;
+        top: 15px;
+        left: 25px;
+        font-size: 60px;
+        color: rgba(0, 0, 0, 0.1);
+        font-weight: bold;
+    }
 
 /* booking page  */
 .search-box {

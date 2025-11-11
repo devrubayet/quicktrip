@@ -27,60 +27,6 @@
         <div class="swiper-pagination mt-3"></div>
     </div>
 
-    <script>
-        var swiper = new Swiper('.testimonialSwiper', {
-            slidesPerView: 1,
-            slidesPerGroup: 1,
-            spaceBetween: 30,
-            loop: true,
-            centeredSlides: false, // ❌ prevent unwanted spacing when looping
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            breakpoints: {
-                768: {
-                    slidesPerView: 1,
-                },
-                992: {
-                    slidesPerView: 1,
-                }
-            }
-        });
-    </script>
-
-    <style>
-    .testimonialSwiper {
-        overflow: hidden !important;
-        width: 100%;
-    }
-
-    .testimonialSwiper .swiper-slide {
-        display: flex;
-        justify-content: center;
-    }
-
-    .testimonial-card {
-        width: 100%;
-        max-width: 900px;
-        border: 1px solid #eee;
-        border-radius: 20px;
-        background: #fff;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-
-    .quote-icon {
-        position: absolute;
-        top: 15px;
-        left: 25px;
-        font-size: 60px;
-        color: rgba(0, 0, 0, 0.1);
-        font-weight: bold;
-    }
-</style>
+ 
 
 </section>

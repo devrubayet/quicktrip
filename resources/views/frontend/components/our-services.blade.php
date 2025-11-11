@@ -27,34 +27,6 @@
         </div>
     </div>
 
-    <!-- Swiper Init -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 3,
-            slidesPerGroup: 1,
-            spaceBetween: 20,
-            loop: true,
-            centeredSlides: false, // ❌ center korle overflow dekhay — eta off
-            autoplay: {
-                delay: 2000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            breakpoints: {
-                0: {
-                    slidesPerView: 1
-                },
-                768: {
-                    slidesPerView: 2
-                },
-                992: {
-                    slidesPerView: 3
-                },
-            },
-        });
-    </script>
+    
 </section>
 @endif
