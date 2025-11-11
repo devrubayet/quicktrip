@@ -13,14 +13,17 @@
     {{-- Open Graph for Facebook/LinkedIn --}}
     <meta property="og:title" content="@yield('title', $site_infos->sitename ?? config('app.name'))">
     <meta property="og:description" content="@yield('meta_description', $site_infos->site_slogan ?? '')">
-    <meta property="og:image" content="{{ asset('storage/' . $site_infos->logo) }}">
+    <meta property="og:image" content="{{ asset('frontend/img/bg-banner1.png') }}">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:type" content="website">
     <meta name="author" content="QuickTrip Team" />
     <meta name="robots" content="index, follow" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <link rel="shortcut icon" href="{{ asset('storage/' . $site_infos->logo) }}" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('admin-end/assets/favicon_io/apple-touch-icon.png') }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ asset('admin-end/assets/favicon_io/favicon-32x32.png') }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ asset('admin-end/assets/favicon_io/favicon-16x16.png') }}">
+<link rel="manifest" href="{{ asset('admin-end/assets/favicon_io/site.webmanifest') }}">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
@@ -63,7 +66,7 @@
 
     <!-- navbar -->
     <!-- Navbar -->
-    <nav class="navbar text-uppercase navbar-expand-lg">
+    <nav class="navbar bg-body-tertiary text-uppercase sticky-top text-light navbar-expand-lg py-0">
         <div class="container">
             <!-- Logo Section -->
             <a data-aos="fade-left" class="navbar-brand" href="{{ route('home') }}">
@@ -83,8 +86,8 @@
             </button>
 
             <!-- Navigation Links -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul data-aos="fade-right" data-aos-delay="103ms" class="navbar-nav">
+            <div class="collapse navbar-collapse justify-content-end py-0 text-light" id="navbarNav">
+                <ul data-aos="fade-right" data-aos-delay="103ms" class="navbar-nav text-light">
                     <li class="nav-item">
                         <a class="menu-item nav-link" href=" {{ route('home') }}">Home</a>
                     </li>
@@ -118,14 +121,17 @@
                     <li class="nav-item">
                         <a class="menu-item nav-link" href="{{ route('contact-us') }}">Contact Us</a>
                     </li>
-                    <li class="nav-item px-2">
-                        <button type="button" class="btn btn-blue px-4 fw-bold py-2" data-bs-toggle="modal"
+                    @if ($banks->isNotEmpty())
+                        <li class="nav-item px-2">
+                        <button type="button" class="btn btn-blue rounded-5 px-4 fw-bold py-2" data-bs-toggle="modal"
                             data-bs-target="#bankDetailsModal">
                             Bank Details
                         </button>
 
 
                     </li>
+                    @endif
+                    
                 </ul>
             </div>
         </div>
