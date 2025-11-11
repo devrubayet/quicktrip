@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         visaModal.show();
 
         // ✅ visaFindUrl আসবে Blade থেকে
-        fetch(visaFindUrl, {
+        fetch(window.visaFindUrl, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
