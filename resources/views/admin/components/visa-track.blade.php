@@ -130,7 +130,7 @@
                         <thead class="table-light">
                             <tr>
                                 <th>Reference Number</th>
-                                <th>Visa Name</th>
+                                <th>Passport Number</th>
                                 <th>Applicant Name</th>
                                 <th>Status</th>
                                 <th>PDF</th>
