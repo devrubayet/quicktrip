@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const referenceNumber = input.value.trim();
         if(!referenceNumber) return;
 
-        // Show modal immediately with loading spinner
         modalBody.innerHTML = `
             <div class="text-center py-3">
                 <div class="spinner-border text-secondary" role="status">
@@ -26,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         visaModal.show();
 
+        // ✅ visaFindUrl আসবে Blade থেকে
         fetch(visaFindUrl, {
             method: 'POST',
             headers: {
@@ -45,8 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p><strong>Reference Number:</strong> ${data.data.reference_number}</p>
                         <p><strong>Passport Number:</strong> ${data.data.name}</p>
                         <p><strong>Status:</strong> <span class="badge bg-${data.data.status==='Approved'?'success':'warning'}">${data.data.status}</span></p>
-                        
-                       
                     </div>
                 `;
             } else {
