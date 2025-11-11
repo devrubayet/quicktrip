@@ -17,7 +17,7 @@ body, html{
 
 }
 .banner {
-
+  
   width: 100%;
   max-height: 100%; /* adjust as needed */
   overflow: hidden;
@@ -35,8 +35,8 @@ body, html{
 }
 
 .banner-content {
-  position: relative;
-  z-index: 1;
+
+  z-index: -1;
   padding: 20px;
 }
 
@@ -100,6 +100,9 @@ body, html{
 }
 
 /* navbar */
+.navbar{
+  z-index: 1;
+}
 
   .navbar-brand img {
     height: 50px; /* Adjust logo size */
@@ -107,13 +110,13 @@ body, html{
   .menu-item {
     font-size: 16px;
     font-weight: 500;
-    color: #ffffff; /* Adjust text color */
+    color: #333333; /* Adjust text color */
     text-decoration: none;
        
 transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth hover effect */
   }
   .menu-item:hover {
-    color: #ff416c; /* Add hover effect */
+    color: #ffffffff; /* Add hover effect */
     text-decoration: underline;
   }
 
