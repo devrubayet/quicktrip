@@ -224,7 +224,7 @@
         
     </script>
     <script>
-        const visaFindUrl = "/{{ route('visa-find') }}" ;
+        const visaFindUrl = {{ route('visa-find') }};
     </script>
     <script src="{{ asset('frontend/js/main.js') }}"></script>
     <script>
