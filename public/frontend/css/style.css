@@ -17,7 +17,7 @@ body, html{
 
 }
 .banner {
-  position: relative;
+
   width: 100%;
   max-height: 100%; /* adjust as needed */
   overflow: hidden;
@@ -100,17 +100,14 @@ body, html{
 }
 
 /* navbar */
-.navbar {
-    background: white;
 
-  }
   .navbar-brand img {
     height: 50px; /* Adjust logo size */
   }
   .menu-item {
     font-size: 16px;
     font-weight: 500;
-    color: #333333; /* Adjust text color */
+    color: #ffffff; /* Adjust text color */
     text-decoration: none;
        
 transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth hover effect */

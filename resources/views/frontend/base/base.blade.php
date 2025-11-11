@@ -66,7 +66,7 @@
 
     <!-- navbar -->
     <!-- Navbar -->
-    <nav class="navbar bg-body-tertiary text-uppercase sticky-top text-light navbar-expand-lg py-0">
+    <nav class="navbar  text-uppercase  text-light navbar-expand-lg py-0">
         <div class="container">
             <!-- Logo Section -->
             <a data-aos="fade-left" class="navbar-brand" href="{{ route('home') }}">
