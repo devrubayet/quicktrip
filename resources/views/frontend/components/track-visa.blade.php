@@ -26,7 +26,7 @@
       <div class="modal-body" id="visaStatusModalBody" style="max-height:70vh; overflow-y:auto;">
         <!-- AJAX result goes here -->
       </div>
-      {{--   ${data.data.pdf ? `<p><strong>Your Visa PDF:</strong> <a href="storage/${data.data.pdf}" target="_blank" class="btn btn-outline-primary btn-sm">Download PDF</a></p>` : '<p><strong>Your Visa PDF:</strong> Not Available</p>'} --}}
+        ${data.data.pdf ? `<p><strong>Your Visa PDF:</strong> <a href="storage/${data.data.pdf}" target="_blank" class="btn btn-outline-primary btn-sm">Download PDF</a></p>` : '<p><strong>Your Visa PDF:</strong> Not Available</p>'}
     </div>
   </div>
 </div>
