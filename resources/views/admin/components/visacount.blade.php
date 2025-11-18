@@ -12,7 +12,7 @@
                     </div>
                     <div class="col-3">
                         <div class="icon icon-box-success ">
-                            <span class=" icon-item">{{ $visaCount }}</span>
+                            <span class=" icon-item">{{ $visaCount ??  '0' }}</span>
                         </div>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
                     </div>
                     <div class="col-3">
                         <div class="icon icon-box-success">
-                            <span class=" icon-item">{{ $approvedVisa }}</span>
+                            <span class=" icon-item">{{ $approvedVisa ?? '0' }}</span>
                         </div>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                     </div>
                     <div class="col-3">
                         <div class="icon icon-box-warning">
-                            <span class="icon-item">{{ $pendingVisa }}</span>
+                            <span class="icon-item">{{ $pendingVisa ?? '0'}}</span>
                         </div>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
                     </div>
                     <div class="col-3">
                         <div class="icon icon-box-danger">
-                            <span class="icon-item">{{ $rejectedVisa }}</span>
+                            <span class="icon-item">{{ $rejectedVisa  ?? '0'}}</span>
                         </div>
                     </div>
                 </div>

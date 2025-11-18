@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\SiteInfo;
-use App\Models\VisaTrack;
+use App\Models\Visa;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -14,10 +14,10 @@ class AdminController extends Controller
     }
     function index(){
         
-        $visaCount = VisaTrack::count();
-        $pendingVisa = VisaTrack::where('status', 'pending')->count();
-        $approvedVisa = VisaTrack::where('status', 'approved')->count();
-        $rejectedVisa = VisaTrack::where('status', 'rejected')->count();
+        $visaCount = Visa::count();
+        $pendingVisa = Visa::where('status', 'pending')->count();
+        $approvedVisa = Visa::where('status', 'approved')->count();
+        $rejectedVisa = Visa::where('status', 'rejected')->count();
         return view ('admin.dashboard',compact('visaCount','pendingVisa', 'approvedVisa','rejectedVisa'));
     }
 

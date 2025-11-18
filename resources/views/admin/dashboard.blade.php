@@ -3,5 +3,5 @@
 @section('content')
 @include('admin.components.visacount')
     
-    
+   
 @endsection

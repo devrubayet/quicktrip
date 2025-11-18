@@ -156,5 +156,50 @@
                 </ul>
             </div>
         </li>
+        <li class="nav-item menu-items {{ request()->routeIs('client.*') ? 'active' : '' }}">
+            <a class="nav-link" data-toggle="collapse" href="#client-menu"
+                aria-expanded="{{ request()->routeIs('bank.*') ? 'true' : 'false' }}"
+                aria-controls="bank-menu">
+                <span class="menu-icon"><i class="mdi mdi-bank"></i></span>
+                <span class="menu-title">Client Details</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse {{ request()->routeIs('client.*') ? 'show' : '' }}" id="client-menu">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item {{ request()->routeIs('all-client') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('client.index') }}">
+                            <span class="menu-icon"><i class="mdi mdi-bank"></i></span>
+                            All Client Details
+                        </a>
+                    </li>
+                    <li class="nav-item {{ request()->routeIs('client-create') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('client.create') }}">
+                            <span class="menu-icon"><i class="mdi mdi-plus-circle"></i></span>
+                            Add Client Details
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item menu-items {{ request()->routeIs('invoice.*') ? 'active' : '' }}">
+            <a class="nav-link" data-toggle="collapse" href="#invoice-menu"
+                aria-expanded="{{ request()->routeIs('bank.*') ? 'true' : 'false' }}"
+                aria-controls="bank-menu">
+                <span class="menu-icon"><i class="mdi mdi-bank"></i></span>
+                <span class="menu-title">Invoices </span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse {{ request()->routeIs('invoice.*') ? 'show' : '' }}" id="client-menu">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item {{ request()->routeIs('invoices.index') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('invoices.index') }}">
+                            <span class="menu-icon"><i class="mdi mdi-bank"></i></span>
+                            Invoices
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </li>
     </ul>
 </nav>

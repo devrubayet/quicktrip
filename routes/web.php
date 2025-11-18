@@ -3,19 +3,21 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AirlineController;
 use App\Http\Controllers\BankController;
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\OurServiceSliderController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SiteSettingsController;
 use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\VisaTrakController;
+use App\Http\Controllers\VisaController;
 use Illuminate\Support\Facades\Route;
 
 /* ============================ Forntend url ======================= */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::post('/', [VisaTrakController::class, 'visa_track'])->name('visa-find');
+Route::post('/', [VisaController::class, 'visa_track'])->name('visa-find');
 Route::get('/our-service', [OurServiceSliderController::class, 'index'])->name('our-service');
 Route::get('/contact-us', [HomeController::class, 'Contact'])->name('contact-us');
 
@@ -30,16 +32,36 @@ Route::middleware(['auth', 'admin'])->group(function () {
         ->name('admin.dashboard');
     Route::get('/admin/siteinfo', [AdminController::class, 'siteInfo'])->name('siteinfo');
 
+    // client
+
+    Route::get('/admin/all-client', [ClientController::class,'index'])->name('client.index');
+    Route::get('/admin/create-client', [ClientController::class,'create'])->name('client.create');
+    Route::post('/admin/client-store', [ClientController::class,'store'])->name('client.store');
+    Route::POST('/admin/clients/ajax', [ClientController::class, 'indexAjax'])->name('client.index.ajax');
+    Route::get('/admin/client/{id}/edit', [ClientController::class, 'edit'])->name('client.edit');
+    Route::get('/admin/client/{id}/overview', [ClientController::class, 'overview'])->name('client.overview');
+
+
+
+    Route::get('invoice/create/{visa}', [InvoiceController::class, 'create'])->name('invoice.create');
+
+    // Store invoice
+    Route::post('invoice/store/{visa}', [InvoiceController::class, 'store'])->name('invoice.store');
+
+    // (পরবর্তীতে) Invoice index/list page
+    Route::get('invoices', [InvoiceController::class, 'index'])->name('invoices.index');
+    Route::get('invoice-show/{id}', [InvoiceController::class, 'show'])->name('invoice.show');
+    Route::get('invoice-download/{id}', [InvoiceController::class, 'download'])->name('invoice.download');
 
     // Visa Tracking
-    Route::get('/admin/visa-status', [VisaTrakController::class, 'index'])->name('admin.visa');
-    Route::get('/admin/create-visatrack', [VisaTrakController::class, 'create'])->name('create-visa');
-    Route::post('/admin/store-visa', [VisaTrakController::class, 'store'])->name('visa-store');
-    Route::get('/admin/edit-visa/{id}', [VisaTrakController::class, 'edit'])->name('visa-edit');
-    Route::put('/admin/update-visa/{id}', [VisaTrakController::class, 'update'])->name('visa-update');
-    Route::delete('/admin/delete-visa/{id}', [VisaTrakController::class, 'destroy'])->name('visa-delete');
+    Route::get('/admin/visa-status', [VisaController::class, 'index'])->name('admin.visa');
+    Route::get('/admin/create-visatrack', [VisaController::class, 'create'])->name('create-visa');
+    Route::post('/admin/store-visa', [VisaController::class, 'store'])->name('visa-store');
+    Route::get('/admin/edit-visa/{id}', [VisaController::class, 'edit'])->name('visa-edit');
+    Route::put('/admin/update-visa/{id}', [VisaController::class, 'update'])->name('visa-update');
+    Route::delete('/admin/delete-visa/{id}', [VisaController::class, 'destroy'])->name('visa-delete');
     // POST for Visa Tracking AJAX JSON
-    Route::post('/admin/visa-status', [VisaTrakController::class, 'indexAjax'])->name('visa-status.index');
+    Route::post('/admin/visa-status', [VisaController::class, 'indexAjax'])->name('visa-status.index');
 
     // Testimonial Urls
     Route::get('/admin/all-testimonial', [TestimonialController::class, 'index'])->name('all-testi');
@@ -62,7 +84,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     
 
     // Route::prefix('visa-status')->name('visa-status.')->group(function () {
-    //     Route::post('/', [VisaTrakController::class, 'index'])->name('index');
+    //     Route::post('/', [VisaController::class, 'index'])->name('index');
     // });
 
     // Our service List Urls
